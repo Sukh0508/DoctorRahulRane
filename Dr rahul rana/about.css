@@ -1,0 +1,340 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffffff;
+  color: #333333;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: #1a2b4c;
+}
+
+h2 {
+  font-size: 3.2rem;
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+}
+
+.section-subhead {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #c6a45c;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 0.5rem;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* ---------- COLOR ACCENTS ---------- */
+.gold-text {
+  color: #c6a45c;
+}
+.bg-light {
+  background-color: #f5f7fa;
+}
+.bg-navy {
+  background-color: #1a2b4c;
+}
+
+/* ---------- ANIMATIONS (subtle entrance) ---------- */
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.8s ease forwards;
+}
+.animate-fade-in {
+  animation: fadeIn 1s ease forwards;
+}
+.animate-slide-left {
+  animation: slideInLeft 0.8s ease forwards;
+}
+.animate-slide-right {
+  animation: slideInRight 0.8s ease forwards;
+}
+.animate-scale {
+  animation: scaleIn 0.6s ease forwards;
+}
+
+/* delays */
+.delay-1 {
+  animation-delay: 0.2s;
+  opacity: 0;
+}
+.delay-2 {
+  animation-delay: 0.4s;
+  opacity: 0;
+}
+.delay-3 {
+  animation-delay: 0.6s;
+  opacity: 0;
+}
+
+/* ---------- BREADCRUMB (no nav bar, just context) ---------- */
+.breadcrumb {
+  padding: 2rem 0 0.5rem 3rem;
+  font-size: 0.9rem;
+  color: #7f8c9f;
+  letter-spacing: 0.5px;
+}
+.breadcrumb a {
+  color: #1a2b4c;
+  text-decoration: none;
+  font-weight: 500;
+}
+.breadcrumb a:hover {
+  color: #c6a45c;
+}
+.breadcrumb i {
+  margin: 0 0.5rem;
+  font-size: 0.7rem;
+  color: #c6a45c;
+}
+
+/* ---------- HERO (smaller, page title) ---------- */
+.about-hero {
+  padding: 2rem 0 3rem;
+  background: linear-gradient(145deg, #f5f7fa 0%, #ffffff 80%);
+  border-bottom: 1px solid #eaeef2;
+}
+.about-hero h1 {
+  font-size: 4.5rem;
+  color: #1a2b4c;
+  margin-bottom: 0.5rem;
+  line-height: 1.1;
+}
+.about-hero .gold-bar {
+  width: 100px;
+  height: 4px;
+  background: #c6a45c;
+  margin: 1rem 0 1.5rem;
+}
+
+/* ---------- DOCTOR DETAIL (split with animation) ---------- */
+.doctor-profile {
+  padding: 4rem 0 3rem;
+}
+.profile-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+.profile-image {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 25px 40px -15px rgba(26, 43, 76, 0.3);
+  transition: transform 0.4s ease;
+}
+.profile-image:hover {
+  transform: scale(1.02);
+}
+.profile-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.profile-content .quote {
+  font-size: 1.4rem;
+  font-style: italic;
+  border-left: 5px solid #c6a45c;
+  padding-left: 1.5rem;
+  margin: 2rem 0;
+  color: #1a2b4c;
+  font-family: "Cormorant Garamond", serif;
+}
+.credentials {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+.credential-badge {
+  background: #f5f7fa;
+  padding: 0.6rem 1.4rem;
+  border-radius: 40px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  border: 1px solid #dce3ec;
+}
+.credential-badge i {
+  color: #c6a45c;
+  margin-right: 0.4rem;
+}
+
+/* ---------- STATS CARD (animated counter style) ---------- */
+
+/* ---------- VALUES / CORE (cards) ---------- */
+.values-section {
+  padding: 5rem 0;
+}
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+.value-card {
+  background: white;
+  padding: 2rem 1.5rem;
+  border-radius: 24px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.03);
+  border: 1px solid #f0f2f5;
+  transition: all 0.3s;
+}
+.value-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 40px rgba(26, 43, 76, 0.08);
+  border-color: #c6a45c40;
+}
+.value-number {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #c6a45c;
+  opacity: 0.3;
+  margin-bottom: 0.5rem;
+  font-family: "Cormorant Garamond", serif;
+}
+.value-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+/* ---------- EXTENDED BIO (from the about page) ---------- */
+.philosophy {
+  background: #f5f7fa;
+  padding: 5rem 0;
+}
+.philosophy-text {
+  columns: 2;
+  column-gap: 3rem;
+  margin-top: 2rem;
+}
+.philosophy-text p {
+  margin-bottom: 1.5rem;
+  break-inside: avoid;
+}
+@media (max-width: 700px) {
+  .philosophy-text {
+    columns: 1;
+  }
+}
+
+/* ---------- HOSPITAL LIST (as mentioned) ---------- */
+.hospitals {
+  padding: 4rem 0;
+  text-align: center;
+}
+.hospital-badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem 2.5rem;
+  margin: 2.5rem 0;
+}
+.hospital-badges span {
+  background: white;
+  padding: 0.5rem 1.8rem;
+  border-radius: 50px;
+  font-weight: 500;
+  color: #1a2b4c;
+  border: 1px solid #d0d9e5;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 900px) {
+  h2 {
+    font-size: 2.5rem;
+  }
+  .profile-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+  .about-hero h1 {
+    font-size: 3.5rem;
+  }
+}
+@media (max-width: 600px) {
+  .container {
+    padding: 0 1.2rem;
+  }
+  .breadcrumb {
+    padding-left: 1.2rem;
+  }
+}

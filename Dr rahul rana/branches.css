@@ -1,0 +1,350 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffffff;
+  color: #333333;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: #1a2b4c;
+}
+
+h2 {
+  font-size: 3.2rem;
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+}
+
+.section-subhead {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #c6a45c;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 0.5rem;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* ---------- COLOR ACCENTS ---------- */
+.gold-text {
+  color: #c6a45c;
+}
+.bg-light {
+  background-color: #f5f7fa;
+}
+.bg-navy {
+  background-color: #1a2b4c;
+}
+
+/* ---------- ANIMATIONS (subtle entrance) ---------- */
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.8s ease forwards;
+}
+.animate-fade-in {
+  animation: fadeIn 1s ease forwards;
+}
+.animate-slide-left {
+  animation: slideInLeft 0.8s ease forwards;
+}
+.animate-slide-right {
+  animation: slideInRight 0.8s ease forwards;
+}
+.animate-scale {
+  animation: scaleIn 0.6s ease forwards;
+}
+
+/* delays */
+.delay-1 {
+  animation-delay: 0.2s;
+  opacity: 0;
+}
+.delay-2 {
+  animation-delay: 0.4s;
+  opacity: 0;
+}
+.delay-3 {
+  animation-delay: 0.6s;
+  opacity: 0;
+}
+
+/* ---------- BREADCRUMB (no nav bar) ---------- */
+.breadcrumb {
+  padding: 2rem 0 0.5rem 3rem;
+  font-size: 0.9rem;
+  color: #7f8c9f;
+  letter-spacing: 0.5px;
+}
+.breadcrumb a {
+  color: #1a2b4c;
+  text-decoration: none;
+  font-weight: 500;
+}
+.breadcrumb a:hover {
+  color: #c6a45c;
+}
+.breadcrumb i {
+  margin: 0 0.5rem;
+  font-size: 0.7rem;
+  color: #c6a45c;
+}
+
+/* ---------- HERO (page title) ---------- */
+.page-hero {
+  padding: 2rem 0 3rem;
+  background: linear-gradient(145deg, #f5f7fa 0%, #ffffff 80%);
+  border-bottom: 1px solid #eaeef2;
+}
+.page-hero h1 {
+  font-size: 4.5rem;
+  color: #1a2b4c;
+  margin-bottom: 0.5rem;
+  line-height: 1.1;
+}
+.page-hero .gold-bar {
+  width: 100px;
+  height: 4px;
+  background: #c6a45c;
+  margin: 1rem 0 1.5rem;
+}
+
+/* ---------- INTRODUCTION ---------- */
+.intro-text {
+  padding: 3rem 0 1rem;
+}
+.intro-text p {
+  font-size: 1.1rem;
+  max-width: 900px;
+  margin-bottom: 1.5rem;
+}
+
+/* ---------- BRANCHES GRID (card style) ---------- */
+.branches {
+  padding: 2rem 0 5rem;
+}
+.branches-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.branch-card {
+  background: white;
+  padding: 1.8rem;
+  border-radius: 24px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.03);
+  border: 1px solid #f0f2f5;
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.branch-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 40px rgba(26, 43, 76, 0.08);
+  border-color: #c6a45c40;
+}
+.branch-icon {
+  font-size: 2.2rem;
+  color: #c6a45c;
+  width: 100%;
+  /* height: 50vh; */
+  margin-bottom: 1rem;
+}
+.branch-icon iframe {
+  height: 40vh;
+  border-radius: 20px;
+  width: 100%;
+}
+.branch-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 0.8rem;
+  color: #1a2b4c;
+}
+.branch-address {
+  display: flex;
+  gap: 0.8rem;
+  margin-bottom: 1.2rem;
+  color: #5a6a7c;
+  font-size: 0.95rem;
+}
+.branch-address i {
+  color: #c6a45c;
+  font-size: 1.1rem;
+  margin-top: 0.2rem;
+}
+.branch-tag {
+  margin-top: auto;
+  background: #f5f7fa;
+  color: #1a2b4c;
+  padding: 0.4rem 1rem;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  display: inline-block;
+  align-self: flex-start;
+  border: 1px solid #e0e6ed;
+}
+
+/* ---------- FEATURES SECTION (navy background) ---------- */
+.features {
+  background: #1a2b4c;
+  color: white;
+  padding: 5rem 0;
+}
+.features h2 {
+  color: white;
+}
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+.feature-item {
+  text-align: center;
+}
+.feature-icon {
+  font-size: 3rem;
+  color: #c6a45c;
+  margin-bottom: 1.5rem;
+}
+.feature-item h4 {
+  color: white;
+  font-size: 1.6rem;
+  margin-bottom: 0.8rem;
+}
+.feature-item p {
+  opacity: 0.9;
+  font-size: 0.95rem;
+}
+
+/* ---------- AFFILIATIONS (light background) ---------- */
+.affiliations {
+  padding: 4rem 0;
+  background: #f5f7fa;
+  text-align: center;
+}
+.hospital-badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem 2rem;
+  margin: 2.5rem 0 0;
+}
+.hospital-badges span {
+  background: white;
+  padding: 0.6rem 2rem;
+  border-radius: 50px;
+  font-weight: 500;
+  color: #1a2b4c;
+  border: 1px solid #d0d9e5;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+  transition: 0.2s;
+}
+.hospital-badges span:hover {
+  border-color: #c6a45c;
+  color: #c6a45c;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 900px) {
+  h2 {
+    font-size: 2.5rem;
+  }
+  .page-hero h1 {
+    font-size: 3.5rem;
+  }
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+  .branches-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .container {
+    padding: 0 1.2rem;
+  }
+  .breadcrumb {
+    padding-left: 1.2rem;
+  }
+  .branches-grid {
+    grid-template-columns: 1fr;
+  }
+}

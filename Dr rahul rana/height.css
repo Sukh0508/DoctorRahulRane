@@ -1,0 +1,439 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffffff;
+  color: #333333;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: #1a2b4c;
+}
+
+h2 {
+  font-size: 3.2rem;
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+}
+
+.section-subhead {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #c6a45c;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 0.5rem;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+.container-form {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+/* ---------- COLOR ACCENTS ---------- */
+.gold-text {
+  color: #c6a45c;
+}
+.bg-light {
+  background-color: #f5f7fa;
+}
+.bg-navy {
+  background-color: #1a2b4c;
+}
+
+/* ---------- ANIMATIONS (subtle entrance) ---------- */
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.8s ease forwards;
+}
+.animate-fade-in {
+  animation: fadeIn 1s ease forwards;
+}
+.animate-slide-left {
+  animation: slideInLeft 0.8s ease forwards;
+}
+.animate-slide-right {
+  animation: slideInRight 0.8s ease forwards;
+}
+.animate-scale {
+  animation: scaleIn 0.6s ease forwards;
+}
+
+/* delays */
+.delay-1 {
+  animation-delay: 0.2s;
+  opacity: 0;
+}
+.delay-2 {
+  animation-delay: 0.4s;
+  opacity: 0;
+}
+.delay-3 {
+  animation-delay: 0.6s;
+  opacity: 0;
+}
+
+/* ---------- BREADCRUMB (no nav bar) ---------- */
+.breadcrumb {
+  padding: 2rem 0 0.5rem 3rem;
+  font-size: 0.9rem;
+  color: #7f8c9f;
+  letter-spacing: 0.5px;
+}
+.breadcrumb a {
+  color: #1a2b4c;
+  text-decoration: none;
+  font-weight: 500;
+}
+.breadcrumb a:hover {
+  color: #c6a45c;
+}
+.breadcrumb i {
+  margin: 0 0.5rem;
+  font-size: 0.7rem;
+  color: #c6a45c;
+}
+
+/* ---------- HERO (page title) ---------- */
+.page-hero {
+  padding: 2rem 0 3rem;
+  background: linear-gradient(145deg, #f5f7fa 0%, #ffffff 80%);
+  border-bottom: 1px solid #eaeef2;
+}
+.page-hero h1 {
+  font-size: 4.5rem;
+  color: #1a2b4c;
+  margin-bottom: 0.5rem;
+  line-height: 1.1;
+}
+.page-hero .gold-bar {
+  width: 100px;
+  height: 4px;
+  background: #c6a45c;
+  margin: 1rem 0 1.5rem;
+}
+
+/* ---------- INTRO SECTION (split) ---------- */
+.height-intro {
+  padding: 4rem 0;
+}
+.intro-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+.intro-image {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 25px 40px -15px rgba(26, 43, 76, 0.3);
+  transition: transform 0.4s ease;
+}
+.intro-image:hover {
+  transform: scale(1.02);
+}
+.intro-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.intro-content .highlight-quote {
+  font-size: 1.4rem;
+  font-style: italic;
+  border-left: 5px solid #c6a45c;
+  padding-left: 1.5rem;
+  margin: 2rem 0;
+  color: #1a2b4c;
+  font-family: "Cormorant Garamond", serif;
+}
+
+/* ---------- APPROACH GRID (two columns) ---------- */
+.approach {
+  padding: 5rem 0;
+  background: #f5f7fa;
+}
+.approach-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+.approach-card {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 24px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.03);
+  border: 1px solid #f0f2f5;
+  transition: all 0.3s;
+  height: 100%;
+}
+.approach-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 40px rgba(26, 43, 76, 0.08);
+  border-color: #c6a45c40;
+}
+.approach-icon {
+  font-size: 2.8rem;
+  color: #c6a45c;
+  margin-bottom: 1.5rem;
+}
+.approach-card h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.approach-card ul {
+  list-style: none;
+  margin-top: 1rem;
+}
+.approach-card li {
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.approach-card li i {
+  color: #c6a45c;
+  font-size: 0.9rem;
+}
+
+/* ---------- SURGICAL TECHNIQUES (three columns) ---------- */
+.techniques {
+  padding: 5rem 0;
+}
+.techniques-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+}
+.technique-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 24px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.03);
+  border: 1px solid #f0f2f5;
+  transition: all 0.3s;
+}
+.technique-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 40px rgba(26, 43, 76, 0.08);
+}
+.technique-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #c6a45c;
+  opacity: 0.2;
+  margin-bottom: 0.5rem;
+  font-family: "Cormorant Garamond", serif;
+}
+.technique-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+/* ---------- EVALUATION PROCESS (navy background) ---------- */
+.evaluation {
+  background: #1a2b4c;
+  color: white;
+  padding: 5rem 0;
+}
+.evaluation h2 {
+  color: white;
+}
+.evaluation-steps {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+  margin-top: 3rem;
+}
+.eval-step {
+  flex: 1 1 200px;
+  text-align: center;
+}
+.eval-step .step-circle {
+  width: 70px;
+  height: 70px;
+  background: rgba(198, 164, 92, 0.15);
+  border: 2px solid #c6a45c;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #c6a45c;
+}
+.eval-step h4 {
+  color: white;
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+/* ---------- CONFIDENCE SECTION (light background) ---------- */
+.confidence {
+  padding: 5rem 0;
+  text-align: center;
+  background: #f5f7fa;
+}
+.confidence p {
+  max-width: 800px;
+  margin: 1.5rem auto 0;
+  font-size: 1.1rem;
+}
+
+/* ---------- EMERGENCY CONTACT (featured) ---------- */
+.emergency {
+  padding: 4rem 0;
+  background: #f5f7fa;
+}
+.emergency-card {
+  background: white;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 3rem;
+  border-radius: 40px;
+  box-shadow: 0 20px 40px rgba(26, 43, 76, 0.1);
+  text-align: center;
+  border: 1px solid #eaeef2;
+}
+.emergency-card i {
+  font-size: 3rem;
+  color: #c6a45c;
+  margin-bottom: 1rem;
+}
+.emergency-card h3 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+.emergency-phone {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1a2b4c;
+  font-family: "Cormorant Garamond", serif;
+  margin: 1.5rem 0;
+  letter-spacing: 1px;
+}
+.emergency-phone a {
+  color: #1a2b4c;
+  text-decoration: none;
+  border-bottom: 2px solid #c6a45c;
+  padding-bottom: 4px;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 900px) {
+  h2 {
+    font-size: 2.5rem;
+  }
+  .page-hero h1 {
+    font-size: 3.5rem;
+  }
+  .intro-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .approach-grid {
+    grid-template-columns: 1fr;
+  }
+  .techniques-grid {
+    grid-template-columns: 1fr;
+  }
+  .container-form {
+    flex-direction: column;
+  }
+}
+@media (max-width: 600px) {
+  .container {
+    padding: 0 1.2rem;
+  }
+  .breadcrumb {
+    padding-left: 1.2rem;
+  }
+  .emergency-phone {
+    font-size: 1.8rem;
+  }
+  .evaluation-steps {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}

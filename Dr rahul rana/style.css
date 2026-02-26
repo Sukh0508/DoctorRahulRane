@@ -1,0 +1,597 @@
+/* ---------- RESET & BASE ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ffffff;
+  color: #333333;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Cormorant Garamond", serif;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: #1a2b4c;
+}
+
+h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  position: relative;
+  display: inline-block;
+}
+
+.section-subhead {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #c6a45c;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 0.5rem;
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* ---------- COLOR ACCENTS ---------- */
+.gold-text {
+  color: #c6a45c;
+}
+.bg-light {
+  background-color: #f5f7fa;
+}
+.bg-navy {
+  background-color: #1a2b4c;
+}
+.btn-gold {
+  display: inline-block;
+  background-color: #c6a45c;
+  color: #1a2b4c;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 1rem 2.5rem;
+  border-radius: 40px;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  border: 2px solid #c6a45c;
+  box-shadow: 0 10px 20px rgba(198, 164, 92, 0.25);
+}
+.btn-gold:hover {
+  background-color: transparent;
+  color: #c6a45c;
+  border: 2px solid #c6a45c;
+  box-shadow: 0 6px 12px rgba(198, 164, 92, 0.35);
+}
+
+.btn-outline-gold {
+  display: inline-block;
+  background-color: transparent;
+  color: #c6a45c;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.75rem 2rem;
+  border-radius: 40px;
+  text-decoration: none;
+  border: 2px solid #c6a45c;
+  transition: 0.3s;
+}
+.btn-outline-gold:hover {
+  background-color: #c6a45c;
+  color: #1a2b4c;
+}
+
+/* ---------- HERO SECTION (no navbar) ---------- */
+.hero {
+  height: 100vh;
+  min-height: 700px;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(26, 43, 76, 0.85) 0%,
+      rgba(26, 43, 76, 0.7) 100%
+    ),
+    url("https://drrahulrane.in/wp-content/uploads/2025/08/WhatsApp-Image-2025-08-20-at-4.42.57-PM.jpeg")
+      center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  color: white;
+  position: relative;
+}
+.hero-content {
+  max-width: 800px;
+  margin-left: 5%;
+}
+.hero-content h1 {
+  font-size: 5rem;
+  font-weight: 700;
+  color: white;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+.hero-content h1 i {
+  color: #c6a45c;
+  font-style: normal;
+  font-weight: 600;
+}
+.hero-content .hero-sub {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+  font-family: "Cormorant Garamond", serif;
+  letter-spacing: 1px;
+  color: #f5f5f5;
+}
+.hero-description {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin-bottom: 2.5rem;
+  opacity: 0.9;
+}
+.trust-badge {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+.trust-badge i {
+  color: #c6a45c;
+  margin-right: 0.4rem;
+}
+
+/* ---------- DOCTOR INTRO (split) ---------- */
+.doctor-intro {
+  padding: 6rem 0;
+  background: white;
+}
+.split-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+.doctor-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 25px 40px -15px rgba(26, 43, 76, 0.3);
+}
+.doctor-content .gold-accent {
+  width: 70px;
+  height: 3px;
+  background: #c6a45c;
+  margin: 1rem 0 1.5rem;
+}
+.doctor-content h2 {
+  font-size: 3.2rem;
+  margin-bottom: 0.2rem;
+}
+.doctor-title {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #c6a45c;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+.doctor-quote {
+  font-size: 1.2rem;
+  font-style: italic;
+  border-left: 4px solid #c6a45c;
+  padding-left: 1.5rem;
+  margin: 1.8rem 0;
+  color: #1a2b4c;
+}
+
+/* ---------- STATS SECTION ---------- */
+.stats-section {
+  padding: 4rem 0;
+  background: #1a2b4c;
+  color: white;
+}
+.stats-grid {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2rem;
+  text-align: center;
+}
+.stat-item {
+  flex: 1 1 180px;
+}
+.stat-number {
+  font-size: 4.5rem;
+  font-weight: 700;
+  font-family: "Cormorant Garamond", serif;
+  color: #c6a45c;
+  line-height: 1;
+}
+.stat-label {
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+/* ---------- SERVICES CARDS ---------- */
+.services {
+  padding: 6rem 0;
+}
+.section-heading {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.section-heading h2 {
+  font-size: 3.5rem;
+}
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+.service-card {
+  background: white;
+  padding: 10px;
+  border-radius: 24px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.05);
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+  border: 1px solid #f0f2f5;
+}
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 30px 40px rgba(26, 43, 76, 0.1);
+}
+.service-icon {
+  font-size: 3.2rem;
+  color: #c6a45c;
+  margin-bottom: 1.5rem;
+}
+.service-card h3 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+.service-card p {
+  color: #5a6a7c;
+  font-size: 0.95rem;
+}
+.spine-image {
+  background-image: url("./image/spine.png");
+  background-size: cover;
+  background-position: bottom;
+  height: 300px;
+  width: 100%;
+  border-radius: 24px;
+}
+.joint-image {
+  background-image: url("./image/joint.png");
+  background-size: cover;
+  background-position: bottom;
+  height: 300px;
+  width: 100%;
+  border-radius: 24px;
+}
+.fra-image {
+  background-image: url("./image/fractue.png");
+  background-size: 100% 100%;
+  /* background-position: bottom; */
+  height: 300px;
+  width: 100%;
+  border-radius: 24px;
+}
+
+.acheivement {
+  height: auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* background-color: #333333; */
+}
+.head-ach {
+  border: 2px solid white;
+  text-align: center;
+  font-size: 30px;
+  padding: 30px 0px;
+}
+.acheivement-img {
+  display: flex;
+  gap: 20px;
+  /* justify-content: space-evenly; */
+  padding: 20px 20px;
+}
+.acheivement1 {
+  height: 500px;
+  border-radius: 30px;
+  background-image: url("https://drrahulrane.in/wp-content/uploads/2025/08/WhatsApp-Image-2025-08-20-at-4.42.55-PM.jpeg");
+  width: 70%;
+  /* border: 2px solid red; */
+  background-size: 100% 100%;
+  transition: 2s;
+}
+.acheivement2 {
+  background-image: url("https://drrahulrane.in/wp-content/uploads/2025/08/WhatsApp-Image-2025-08-20-at-4.42.51-PM.jpeg");
+  height: 500px;
+  width: 70%;
+  background-size: 100% 100%;
+  border-radius: 30px;
+  transition: 2s;
+  /* border: 2px solid red; */
+}
+
+.acheivement3 {
+  background-image: url("https://drrahulrane.in/wp-content/uploads/2025/08/WhatsApp-Image-2025-08-20-at-4.42.49-PM.jpeg");
+  height: 500px;
+  width: 70%;
+  background-size: 100% 100%;
+  border-radius: 30px;
+  transition: 2s;
+  /* border: 2px solid red; */
+}
+.acheivement4 {
+  background-image: url("https://drrahulrane.in/wp-content/uploads/2025/08/WhatsApp-Image-2025-08-20-at-4.42.45-PM.jpeg");
+  height: 500px;
+  width: 70%;
+  transition: 2s;
+  background-size: 100% 100%;
+  border-radius: 30px;
+  /* border: 2px solid red; */
+}
+.acheivement1:hover {
+  transform: translateY(-20px);
+  box-shadow: 0 30px 40px rgba(26, 43, 76, 0.1);
+}
+.acheivement2:hover {
+  transform: translateY(-20px);
+  box-shadow: 0 30px 40px rgba(26, 43, 76, 0.1);
+}
+.acheivement3:hover {
+  transform: translateY(-20px);
+  box-shadow: 0 30px 40px rgba(26, 43, 76, 0.1);
+}
+.acheivement4:hover {
+  transform: translateY(-20px);
+  box-shadow: 0 30px 40px rgba(26, 43, 76, 0.1);
+}
+
+/* ---------- PATIENT JOURNEY (how it works) ---------- */
+.journey {
+  padding: 6rem 0;
+  background: #f5f7fa;
+}
+.timeline {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem 1rem;
+  margin: 4rem 0 2rem;
+}
+.timeline-step {
+  flex: 1 1 200px;
+  text-align: center;
+  position: relative;
+}
+.step-circle {
+  width: 80px;
+  height: 80px;
+  background: white;
+  border: 3px solid #c6a45c;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1.5rem;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a2b4c;
+  font-family: "Cormorant Garamond", serif;
+  box-shadow: 0 8px 0 #1a2b4c;
+}
+.timeline-step h4 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.timeline-step p {
+  font-size: 0.9rem;
+  color: #4a5a6e;
+}
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition:
+    opacity 0.8s cubic-bezier(0.2, 0.9, 0.3, 1),
+    transform 0.8s cubic-bezier(0.2, 0.9, 0.3, 1);
+  will-change: opacity, transform;
+}
+.animate-on-scroll.animated {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* HOME / HERO ENTRANCE ANIMATION (separate, only for hero) */
+.hero .hero-content {
+  opacity: 0; /* start hidden */
+  transform: translateY(20px);
+  animation: homeEntrance 1s ease-out forwards;
+  animation-delay: 0.2s; /* slight delay after page paint */
+}
+
+@keyframes homeEntrance {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------- PREMIUM CTA APPOINTMENT ---------- */
+.cta-premium {
+  background:
+    linear-gradient(
+      135deg,
+      rgba(26, 43, 76, 0.85) 0%,
+      rgba(26, 43, 76, 0.7) 100%
+    ),
+    url("https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=1780&auto=format&fit=crop")
+      center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  color: white;
+  padding: 5rem 2rem;
+}
+.cta-content {
+  width: 60%;
+}
+.cta-content h2 {
+  color: white;
+  font-size: 3.5rem;
+  line-height: 60px;
+}
+.cta-content p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 1rem auto 2.5rem;
+  opacity: 0.9;
+}
+
+form {
+  border: 1px solid #c6a45c;
+  display: flex;
+  padding: 2rem 0rem;
+  border-radius: 20px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  /* flex-direction: column; */
+  width: 60%;
+  /* padding: 5rem 5rem; */
+}
+form input {
+  display: flex;
+  width: 90%;
+  height: 60px;
+  border-radius: 20px;
+  font-size: 20px;
+  padding: 0px 20px;
+}
+.review-head {
+  /* border: 2px solid green; */
+  text-align: center;
+  font-size: 40px;
+  padding: 20px 10px;
+}
+.review-text {
+  /* border: 2px solid gold; */
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  align-items: center;
+  padding: 50px 30px;
+}
+.box {
+  /* border: 2px solid greenyellow; */
+  width: 30%;
+  padding: 10px 10px;
+}
+.box span {
+  font-size: 22px;
+}
+.review-icon {
+  color: gold;
+}
+.box:hover {
+  box-shadow: 0 30px 40px rgba(26, 43, 76, 0.1);
+}
+
+/* ---------- RESPONSIVENESS ---------- */
+@media (max-width: 900px) {
+  h2 {
+    font-size: 2.5rem;
+  }
+  .hero-content h1 {
+    font-size: 3rem;
+  }
+  .split-grid {
+    grid-template-columns: 1fr;
+  }
+  .doctor-image {
+    order: 2;
+  }
+  .hero-logo {
+    left: 1.5rem;
+  }
+  .cta-premium {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0px;
+  }
+  .cta-content {
+    width: 100%;
+    /* border: 2px solid red; */
+  }
+  form {
+    width: 95%;
+  }
+}
+@media (max-width: 600px) {
+  .hero {
+    height: auto;
+    background-size: cover;
+    background-position: right;
+
+    /* background-position: center; */
+  }
+  .hero-content {
+    margin-left: 0.5rem;
+    padding: 15px 0px;
+  }
+  .btn-gold {
+    padding: 0.8rem 1.5rem;
+  }
+  .acheivement-img {
+    flex-direction: column;
+    /* padding: 0; */
+    margin-left: 20px;
+  }
+  .acheivement1 {
+    width: 90%;
+  }
+  .acheivement2 {
+    width: 90%;
+  }
+  .acheivement3 {
+    width: 90%;
+  }
+  .acheivement4 {
+    width: 90%;
+  }
+  .review-text {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 20px;
+  }
+  .box {
+    width: 90%;
+  }
+}
