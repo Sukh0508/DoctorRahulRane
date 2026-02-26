@@ -313,15 +313,17 @@ h2 {
 }
 .acheivement-img {
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 20px;
   /* justify-content: space-evenly; */
-  padding: 20px 20px;
+  padding: 20px 0px;
 }
 .acheivement1 {
   height: 500px;
   border-radius: 30px;
   background-image: url("https://drrahulrane.in/wp-content/uploads/2025/08/WhatsApp-Image-2025-08-20-at-4.42.55-PM.jpeg");
-  width: 70%;
+  width: 30%;
   /* border: 2px solid red; */
   background-size: 100% 100%;
   transition: 2s;
@@ -329,7 +331,7 @@ h2 {
 .acheivement2 {
   background-image: url("https://drrahulrane.in/wp-content/uploads/2025/08/WhatsApp-Image-2025-08-20-at-4.42.51-PM.jpeg");
   height: 500px;
-  width: 70%;
+  width: 30%;
   background-size: 100% 100%;
   border-radius: 30px;
   transition: 2s;
@@ -339,7 +341,7 @@ h2 {
 .acheivement3 {
   background-image: url("https://drrahulrane.in/wp-content/uploads/2025/08/WhatsApp-Image-2025-08-20-at-4.42.49-PM.jpeg");
   height: 500px;
-  width: 70%;
+  width: 30%;
   background-size: 100% 100%;
   border-radius: 30px;
   transition: 2s;
@@ -348,7 +350,25 @@ h2 {
 .acheivement4 {
   background-image: url("https://drrahulrane.in/wp-content/uploads/2025/08/WhatsApp-Image-2025-08-20-at-4.42.45-PM.jpeg");
   height: 500px;
-  width: 70%;
+  width: 30%;
+  transition: 2s;
+  background-size: 100% 100%;
+  border-radius: 30px;
+  /* border: 2px solid red; */
+}
+.acheivement5 {
+  background-image: url("./image/newimagedoctor.png");
+  height: 500px;
+  width: 30%;
+  transition: 2s;
+  background-size: 100% 100%;
+  border-radius: 30px;
+  /* border: 2px solid red; */
+}
+.acheivement6 {
+  background-image: url("./image/medalimage.png");
+  height: 500px;
+  width: 30%;
   transition: 2s;
   background-size: 100% 100%;
   border-radius: 30px;
@@ -367,6 +387,14 @@ h2 {
   box-shadow: 0 30px 40px rgba(26, 43, 76, 0.1);
 }
 .acheivement4:hover {
+  transform: translateY(-20px);
+  box-shadow: 0 30px 40px rgba(26, 43, 76, 0.1);
+}
+.acheivement5:hover {
+  transform: translateY(-20px);
+  box-shadow: 0 30px 40px rgba(26, 43, 76, 0.1);
+}
+.acheivement6:hover {
   transform: translateY(-20px);
   box-shadow: 0 30px 40px rgba(26, 43, 76, 0.1);
 }
@@ -572,19 +600,25 @@ form input {
   .acheivement-img {
     flex-direction: column;
     /* padding: 0; */
-    margin-left: 20px;
+    margin-left: 15px;
   }
   .acheivement1 {
-    width: 90%;
+    width: 95%;
   }
   .acheivement2 {
-    width: 90%;
+    width: 95%;
   }
   .acheivement3 {
-    width: 90%;
+    width: 95%;
   }
   .acheivement4 {
-    width: 90%;
+    width: 95%;
+  }
+    .acheivement5 {
+    width: 95%;
+  }
+    .acheivement6 {
+    width: 95%;
   }
   .review-text {
     display: flex;
