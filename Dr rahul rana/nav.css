@@ -22,13 +22,14 @@ header {
 .navbar {
   display: flex;
   list-style: none;
-  gap: 2rem;
+  gap: 1rem;
   position: relative;
   font-size: 22px;
   /* border: 2px solid gold; */
 }
 .navbar li a {
   color: black;
+  font-size: 18px;
 }
 .navbar li a:hover {
   text-decoration: underline #c6a45c;
@@ -49,10 +50,10 @@ header {
   top: 100%;
   left: 30%;
   z-index: 99;
-  font-size: 22px;
+  white-space: nowrap;
   border-radius: 20px;
   flex-direction: column;
-  gap: 2rem;
+  gap: 15px;
   background: linear-gradient(
     135deg,
     rgba(26, 43, 76, 0.85) 0%,
@@ -63,7 +64,8 @@ header {
   transform: translateY(-10px);
   pointer-events: none;
   transition: all 0.3s ease-in-out;
-  display: flex;
+  /* display: flex; */
+  display: inline-block;
   margin-top: 10px;
 }
 
@@ -74,6 +76,8 @@ header {
 }
 .dropdown li a {
   color: white;
+  display: inline-block;
+  /* font-size: 10px; */
   /* display: none; */
 }
 #open {
