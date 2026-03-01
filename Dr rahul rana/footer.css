@@ -22,10 +22,11 @@
   align-items: start;
 }
 .footer-name {
-  background-image: url("https://drrahulrane.in/wp-content/uploads/2025/06/WhatsApp_Image_2025-08-05_at_12.07.43_PM-removebg-preview.png");
+  background-image: url("./image/sainitstarlogo.jpeg");
   background-size: cover;
   height: 60px;
   width: 60px;
+  border-radius: 50%;
 }
 .footer-credentials {
   font-size: 20px;
@@ -84,7 +85,11 @@
 }
 .social-media {
   padding: 20px 0px;
-  font-size: 22px;
+  /* font-size: 22px; */
+}
+.social-media a {
+  
+  font-size: 30px;
 }
 
 @media (max-width: 600px) {

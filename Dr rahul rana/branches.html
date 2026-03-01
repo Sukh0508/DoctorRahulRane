@@ -27,7 +27,7 @@
   </head>
   <body>
     <header>
-      <div class="logo"></div>
+       <a href="index.html"><div class="logo"></div></a>
       <ul class="navbar">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About Us</a></li>
@@ -105,6 +105,29 @@
         <div class="section-subhead animate-fade-up">Locations</div>
         <h2 class="animate-fade-up delay-1">Find a Clinic Near You</h2>
         <div class="branches-grid">
+              <!-- Sainit Star Hospital -->
+          <div class="branch-card animate-scale delay-3">
+            <div class="branch-icon">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d482428.6818171109!2d72.835942!3d19.152612!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b700264bc63d%3A0x68853bb098a81547!2sSainit%20Star%20Multispeciality%20Hospital!5e0!3m2!1sen!2sus!4v1771926988419!5m2!1sen!2sus"
+                width="600"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+            <h3>Sainit Star Hospital</h3>
+            <div class="branch-address">
+              <i class="fas fa-map-marker-alt"></i>
+              <span
+                >Ground floor, New Link Road, Near Oshiwara Bus Depot, Oshiwara,
+                Goregaon West, Mumbai</span
+              >
+            </div>
+            <span class="branch-tag">Goregaon West</span>
+          </div>
           <!-- Raksha Hospital -->
           <div class="branch-card animate-scale delay-1">
             <div class="branch-icon">
@@ -342,29 +365,7 @@
             <span class="branch-tag">Powai / Chandivali</span>
           </div>
 
-          <!-- Sainit Star Hospital -->
-          <div class="branch-card animate-scale delay-3">
-            <div class="branch-icon">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d482428.6818171109!2d72.835942!3d19.152612!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b700264bc63d%3A0x68853bb098a81547!2sSainit%20Star%20Multispeciality%20Hospital!5e0!3m2!1sen!2sus!4v1771926988419!5m2!1sen!2sus"
-                width="600"
-                height="450"
-                style="border: 0"
-                allowfullscreen=""
-                loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"
-              ></iframe>
-            </div>
-            <h3>Sainit Star Hospital</h3>
-            <div class="branch-address">
-              <i class="fas fa-map-marker-alt"></i>
-              <span
-                >Ground floor, New Link Road, Near Oshiwara Bus Depot, Oshiwara,
-                Goregaon West, Mumbai</span
-              >
-            </div>
-            <span class="branch-tag">Goregaon West</span>
-          </div>
+      
         </div>
       </div>
     </section>
@@ -430,7 +431,7 @@
 
     <footer class="footer animate-on-scroll">
       <div class="footer-logo-div">
-        <div class="footer-name"></div>
+        <a href="index.html"> <div class="footer-name"></div></a>
         <div class="footer-credentials">
           Orthopaedic surgeon with expertise in joint replacement and spine
           surgery. Spine surgery using endoscopy. Orthopaedic minimally invasive
@@ -457,15 +458,14 @@
       <div class="social-icons">
         <h3 style="color: white; font-size: 30px">Contact-Us</h3>
         <div class="cta-flex">
-          <a href=""><i class="ri-phone-fill"></i>+91 9833011340</a>
-          <a href=""><i class="ri-mail-fill"></i> info@drrahulrane.in</a>
+          <a href="tel:+919833011340"><i class="ri-phone-fill"></i>+91 9833011340</a>
+          <a href="mailto:info@drrahul.in"><i class="ri-mail-fill"></i> info@drrahulrane.in</a>
         </div>
-        <div class="social-media">
-          <a href="#" aria-label="LinkedIn"><i class="ri-linkedin-fill"></i></a>
-          <a href="#" aria-label="Twitter"
-            ><i class="ri-facebook-circle-fill"></i
+         <div class="social-media">
+          <a href="https://www.linkedin.com/in/dr-rahul-rane/"><i class="ri-linkedin-fill"></i></a>
+          <a href="https://www.facebook.com/share/1bnE7VxinB/"><i class="ri-facebook-circle-fill"></i
           ></a>
-          <a href="#" aria-label="Instagram"
+          <a href="https://www.instagram.com/dr.rahulrane?igsh=MTZqcHlhOTdmcWo2MQ==" 
             ><i class="ri-instagram-fill"></i
           ></a>
         </div>
@@ -476,7 +476,20 @@
     </footer>
 
     <!-- subtle back to top -->
-    <div style="position: fixed; bottom: 2rem; right: 2rem; z-index: 99">
+    <div style="position: fixed; bottom: 2rem; right: 2rem; z-index: 99; display: flex;
+    flex-direction: column; gap: 15px;">
+              <a href="" style="
+          background: #25D366;
+          color: white;
+          font-size: 25px;
+          width: 48px;
+          height: 48px;
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+        " class="whatsapp-msg"><i class="ri-whatsapp-fill"></i></a>
       <a
         href="#"
         style="
@@ -494,6 +507,17 @@
         ><i class="fas fa-arrow-up"></i
       ></a>
     </div>
+    <script>
+       let whatsapbtn= document.querySelector(".whatsapp-msg").addEventListener('click',function () {
+        let num ="+919833011340"
+        let msg = "Enquiry from website"
+        let encoded = encodeURIComponent(msg);
+
+        let url = `https://wa.me/${num}?text=${encoded}`
+           window.open(url,"_blank");
+        
+      })
+    </script>
 
     <script src="nav.js"></script>
   </body>
